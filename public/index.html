@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>春节快乐！</title>
+    <script type="text/javascript">
+      _a();
+      window.addEventListener('resize', _a, false);
+
+      function _a() {
+        document.documentElement.style.fontSize = Math.min(document.documentElement.clientWidth, document
+          .documentElement.clientHeight) / 7.5 + 'px';
+      }
+    </script>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but newyearcard2 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but this web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
