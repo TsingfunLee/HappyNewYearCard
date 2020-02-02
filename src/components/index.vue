@@ -8,7 +8,9 @@
       <div class="zero num bg-img"></div>
     </div>
     <div class="bg-img happy"></div>
-    <div class="type-text">新年快乐</div>
+    <div class="type-text">
+      <span>新年快乐</span>
+    </div>
     <div class="bg-img bottom"></div>
     <a href="https://github.com/TsingfunLee" class="link">@TsingfunLee/池月</a>
   </div>
@@ -41,7 +43,7 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    animation: twinkle 5s ease-in 3s alternate infinite both;
+    animation: twinkle 8s ease-in 3s alternate infinite both;
   }
   &::after {
     content: "";
@@ -101,15 +103,26 @@ export default {
     font-size: 0.72rem;
     line-height: 1;
     margin-top: 0.44rem;
-    text-align: center;
+    width: 4em;
+    position: relative;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    span{
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 2s steps(1) 4.8s both;
+    }
     &::after {
       content: "";
       display: inline-block;
       width: 1px;
       height: 0.72rem;
       background-color: #a71616;
-      vertical-align: text-top;
+      vertical-align: top;
       margin-left: 0.12rem;
+      animation: cursor 0.4s linear 4.8s both infinite;
     }
   }
   .bottom {
@@ -135,11 +148,14 @@ export default {
 }
 
 @keyframes twinkle {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
-    opacity: 1;
+  30%{
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.75;
   }
 }
 
@@ -165,6 +181,31 @@ export default {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes cursor {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  0%{
+    width: 0;
+  }
+  25%{
+    width: 1em;
+  }
+  50%{
+    width: 2em;
+  }
+  75%{
+    width: 3em;
+  }
+  100%{
+    width: 4em;
   }
 }
 </style>
