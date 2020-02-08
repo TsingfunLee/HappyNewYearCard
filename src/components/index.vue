@@ -177,7 +177,7 @@ export default {
     transform: translateY(0.3rem);
   }
   80% {
-    transform: translateY(-0.1rem);
+    transform: translateY(-0.3rem);
   }
   100% {
     transform: translateY(0);
