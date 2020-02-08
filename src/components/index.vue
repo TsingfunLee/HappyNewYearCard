@@ -11,6 +11,7 @@
     <div class="type-text">
       <span>新年快乐</span>
     </div>
+    <div class="touch" v-if="false"></div>
     <div class="bg-img bottom"></div>
     <a href="https://github.com/TsingfunLee" class="link">@TsingfunLee/池月</a>
   </div>
@@ -125,6 +126,14 @@ export default {
       animation: cursor 0.4s linear 4.8s both infinite;
     }
   }
+  .touch{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 100%;
+    border: solid #e2ff89 0.08rem;
+    margin: 0.8rem auto 0 auto;
+    animation: scale 1s ease 6.8s alternate both infinite;
+  }
   .bottom {
     background-image: url(../assets/bottom.png);
     width: 2.64rem;
@@ -206,6 +215,14 @@ export default {
   }
   100%{
     width: 4em;
+  }
+}
+@keyframes scale{
+  from{
+    transform: scale(0.6, 0.6);
+  }
+  to{
+    transform: scale(1, 1);
   }
 }
 </style>
