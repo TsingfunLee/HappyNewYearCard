@@ -29,10 +29,14 @@ export default {
   padding-top: 2.34rem;
   height: 100%;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
+  transform: translateX(-50%);
   background-color: #6f9d5c;
   box-sizing: border-box;
+  @media (min-aspect-ratio : 768/1024){
+    min-height: 12.06rem;
+  }
   &::before {
     content: "";
     display: block;
